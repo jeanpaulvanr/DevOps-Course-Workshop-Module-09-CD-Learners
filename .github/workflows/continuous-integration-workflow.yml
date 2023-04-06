@@ -33,6 +33,6 @@ jobs:
     steps:
     -  uses: actions/checkout@v2
     -  run: docker build --target production --tag ${{ secrets.DOCKERHUB_USERNAME }}/workshop-9 .
-    -  run: docker login --${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
+    -  run: docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
     -  run: docker push docker.io/${{ secrets.DOCKERHUB_USERNAME }}/workshop-9
     -  run: curl -dH -X POST "${{ secrets.JP_URL}}"
