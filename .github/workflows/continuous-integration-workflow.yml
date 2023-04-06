@@ -26,6 +26,3 @@ jobs:
       run: npm run test
       working-directory: ./DotnetTemplate.Web
 
-  push:
-    - name: 
-
